@@ -1,0 +1,15 @@
+clear classes;
+rmi('unregister','linktype_rmi_teamcenter');
+mod = py.importlib.import_module('teamcenter.handlers');
+py.importlib.reload(mod);
+mod = py.importlib.import_module('teamcenter.commands');
+py.importlib.reload(mod);
+mod = py.importlib.import_module('teamcenter.services');
+py.importlib.reload(mod);
+mod = py.importlib.import_module('teamcenter.alias');
+py.importlib.reload(mod);
+mod = py.importlib.import_module('teamcenter.connection');
+py.importlib.reload(mod);
+mod = py.importlib.import_module('teamcenter.tc_matlab');
+py.importlib.reload(mod);
+rmi('register','linktype_rmi_teamcenter');
